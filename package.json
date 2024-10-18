@@ -1,10 +1,14 @@
 {
+  "homepage": "https://kennedy200.github.io/Launch-Waitlist",
   "name": "thrivr-waitlist",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "clean": "rm -rf dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
