@@ -1,0 +1,176 @@
+/* Body Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Fullscreen Background Image */
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+  background-image: url('https://i.pinimg.com/564x/aa/72/bf/aa72bf0e27cfcd46ab22e8c1f22724c0.jpg'); /* Replace with your image path */
+  background-size: cover; /* Cover entire area */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the image static while scrolling */
+}
+
+.meow-meow {
+  font-size: 3rem; /* Adjust the font size as needed */
+  color: #333;
+  text-align: center;
+  font-weight: bold;
+  animation: fadeInScale 1.5s ease forwards, glowText 2.5s ease-in-out infinite alternate;
+  position: relative;
+}
+
+/* Form Wrapper */
+.signup-form {
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px; /* Set a max width */
+  margin: 0 20px; /* Adds margin for smaller devices */
+}
+
+/* Form Heading */
+.signup-form h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease;
+}
+
+/* Email Input */
+.signup-input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  border: 2px solid #007bff;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.7); /* Semi-transparent input background */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Input focus effect */
+.signup-input:focus {
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
+}
+
+/* Submit Button */
+.submit-btn {
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #007bff, #00ff99);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+  width: 100%;
+}
+
+/* Hover and click animation */
+.submit-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 123, 255, 0.3);
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* Thank You message styling */
+.thank-you-message {
+  animation: fadeIn 1s ease;
+}
+
+/* Error message styling */
+.error-message {
+  color: #ff4d4d;
+  font-size: 1rem;
+  margin-top: 10px;
+  animation: fadeIn 0.5s ease;
+  padding: 10px;
+  border: 1px solid #ff4d4d;
+  background-color: #ffeded;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(255, 77, 77, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade-in and scale animation */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Glow effect with text shadow */
+@keyframes glowText {
+  0% {
+    text-shadow: 0 0 10px rgba(0, 123, 255, 0.4), 0 0 20px rgba(0, 123, 255, 0.6), 0 0 30px rgba(0, 123, 255, 0.8);
+    color: #007bff;
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(0, 255, 153, 0.4), 0 0 25px rgba(0, 255, 153, 0.6), 0 0 40px rgba(0, 255, 153, 0.8);
+    color: #00ff99;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .signup-form {
+    width: 90%;
+    max-width: none;
+  }
+  
+  .signup-input {
+    width: 100%;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-form {
+    padding: 20px;
+  }
+
+  .signup-input {
+    padding: 12px;
+  }
+
+  .submit-btn {
+    padding: 12px;
+  }
+}

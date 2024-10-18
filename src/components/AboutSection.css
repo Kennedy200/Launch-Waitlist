@@ -1,0 +1,149 @@
+/* General Styles for the About Section */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-attachment: fixed; /* For parallax effect */
+    background-image: url('https://your-background-image-url.com/background.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Container for Content */
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    opacity: 0;  /* Start hidden for scroll-trigger animation */
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  }
+  
+  /* Visible class for scroll-triggered animation */
+  .about-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Text Section */
+  .about-text {
+    flex: 1;
+    padding: 20px;
+    animation: fadeInLeft 1.5s ease-in-out;
+  }
+  
+  .about-heading {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .about-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .key-benefits {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .key-benefits li {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .key-benefits li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #4caf50;
+  }
+  
+  .key-benefits li:hover {
+    color: #4caf50;
+  }
+  
+  /* Image Section */
+  .about-image {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    animation: fadeInRight 1.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .about-img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  }
+  
+  .about-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);  /* Hover effect for image */
+  }
+  
+  /* Keyframe animations */
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-text {
+      padding: 0;
+    }
+  
+    .about-heading {
+      font-size: 2.5rem;
+    }
+  
+    .about-description {
+      font-size: 1.1rem;
+    }
+  
+    .about-img {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+  }
+  
