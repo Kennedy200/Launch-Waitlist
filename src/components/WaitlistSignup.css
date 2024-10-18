@@ -146,7 +146,15 @@ body {
 }
 
 /* Responsive Design */
+
 @media (max-width: 768px) {
+  .signup-container {
+    background-image: none; /* Remove the background image on mobile */
+    background-color: white; /* Set plain white background for mobile */
+    background-size: cover; /* Ensure it covers even on smaller devices */
+    background-position: center; /* Center the background if needed */
+  }
+
   .signup-form {
     width: 90%;
     max-width: none;
