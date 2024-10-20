@@ -17,6 +17,7 @@ body {
   background-position: center; /* Center the background image */
   background-repeat: no-repeat;
   background-attachment: fixed; /* Keeps the image static while scrolling */
+  padding: 0 20px;
 }
 
 .meow-meow {
@@ -49,7 +50,7 @@ body {
 
 /* Email Input */
 .signup-input {
-  width: 100%;
+  width: calc(100% - 30px);
   padding: 15px;
   font-size: 1.1rem;
   border-radius: 25px;
@@ -59,6 +60,7 @@ body {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
   outline: none;
   transition: all 0.3s ease;
+  margin-left: 15px;
 }
 
 /* Input focus effect */
@@ -153,15 +155,18 @@ body {
     background-color: white; /* Set plain white background for mobile */
     background-size: cover; /* Ensure it covers even on smaller devices */
     background-position: center; /* Center the background if needed */
+    padding: 0 15px;
   }
 
   .signup-form {
     width: 90%;
     max-width: none;
+    padding: 20px;
   }
   
   .signup-input {
-    width: 100%;
+    padding: 12px;
+    width: calc(100% - 24px); 
   }
 
   .submit-btn {

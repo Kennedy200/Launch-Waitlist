@@ -3,21 +3,20 @@ import './WaitlistSignup.css';
 
 const WaitlistSignup = () => {
   const [email, setEmail] = useState('');
-  const [submittedEmails, setSubmittedEmails] = useState([]); // Store submitted emails
+  const [submittedEmails, setSubmittedEmails] = useState([]); 
   const [error, setError] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Check if email is already submitted
     if (submittedEmails.includes(email)) {
       setError('This email has already been submitted.');
     } else {
-      setSubmittedEmails([...submittedEmails, email]); // Add email to the list
-      setIsSubmitted(true); // Hide the form and show thank you message
-      setError(''); // Clear any previous errors
-      setEmail(''); // Clear email input
+      setSubmittedEmails([...submittedEmails, email]);
+      setIsSubmitted(true);
+      setError('');
+      setEmail('');
     }
   };
 
@@ -25,7 +24,7 @@ const WaitlistSignup = () => {
     <div id="waitlist-section" className="signup-container">
       {!isSubmitted ? (
         <form className="signup-form" onSubmit={handleSubmit}>
-          <h2 className='meow-meow'>Join the Waitlist</h2>
+          <h2 className="meow-meow">Join the Waitlist</h2>
           <input 
             type="email"
             className="signup-input"
@@ -42,7 +41,7 @@ const WaitlistSignup = () => {
         </div>
       )}
 
-      {error && <div className="error-message">{error}</div>} {/* Show error message */}
+      {error && <div className="error-message">{error}</div>}
     </div>
   );
 };
